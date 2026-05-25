@@ -18,11 +18,11 @@ export default async function Footer() {
         <div className="max-w-sm">
           <Link className="flex items-center gap-2 md:pt-1" href="/">
             <LogoSquare size="sm" />
-            <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--brand-ink)]">
+            <span className="font-display text-sm font-bold tracking-wide text-[var(--brand-ink)]">
               {STORE_NAME}
             </span>
           </Link>
-          <p className="mt-4 text-base font-medium text-[var(--brand-ink)]">
+          <p className="mt-4 font-display text-lg font-semibold text-[var(--brand-ink)]">
             {TAGLINE}
           </p>
           <p className="mt-3 leading-6">
@@ -45,7 +45,7 @@ export default async function Footer() {
           <FooterMenu menu={menu} />
         </Suspense>
         <div className="md:ml-auto md:max-w-xs">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--brand-ink)]">
+          <p className="font-display text-xs font-bold uppercase tracking-[0.24em] text-[var(--brand-ink)]">
             Modern Comfort
           </p>
           <p className="mt-3 leading-6">

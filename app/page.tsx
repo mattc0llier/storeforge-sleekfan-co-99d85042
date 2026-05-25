@@ -38,15 +38,15 @@ export default async function HomePage() {
   return (
     <>
       <div className="border-b border-[var(--brand-border)] bg-white/60">
-        <section className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-10 md:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14 lg:py-16">
+        <section className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 md:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14 lg:py-20">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--brand-accent)]">
+            <p className="font-display text-xs font-bold uppercase tracking-[0.35em] text-[var(--brand-accent)]">
               {STORE_NAME}
             </p>
             <p className="mt-3 text-sm font-medium text-[var(--brand-muted)]">
               {TAGLINE}
             </p>
-            <h1 className="mt-4 max-w-xl text-4xl font-semibold tracking-tight text-[var(--brand-ink)] sm:text-5xl">
+            <h1 className="mt-4 max-w-xl font-display text-4xl font-bold tracking-tight text-[var(--brand-ink)] sm:text-5xl lg:text-6xl">
               {HOMEPAGE_HEADLINE}
             </h1>
             <p className="mt-5 max-w-xl text-base leading-7 text-[var(--brand-muted)] sm:text-lg">
@@ -55,7 +55,7 @@ export default async function HomePage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/search"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--brand-accent)] px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-95"
+                className="inline-flex items-center justify-center rounded-full bg-[var(--brand-accent)] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[var(--brand-accent)]/20 transition-all hover:shadow-xl hover:shadow-[var(--brand-accent)]/30"
               >
                 Shop The Collection
               </Link>
@@ -85,15 +85,15 @@ export default async function HomePage() {
               href={`/product/${heroProduct.handle}`}
               className="group block"
             >
-              <div
-                className="relative overflow-hidden rounded-[2rem] border border-[var(--brand-border)] p-4"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(180deg, #ffffff 0%, rgba(238, 244, 255, 0.92) 100%)",
-                  boxShadow: "0 24px 80px rgba(17, 24, 39, 0.10)",
-                }}
-              >
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-[#eef4ff]">
+            <div
+              className="relative overflow-hidden rounded-[2rem] border border-[var(--brand-border)] p-4"
+              style={{
+                backgroundImage:
+                  "linear-gradient(180deg, #ffffff 0%, rgba(245, 245, 244, 0.95) 100%)",
+                boxShadow: "0 24px 80px rgba(28, 25, 23, 0.08)",
+              }}
+            >
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-gradient-to-b from-stone-100 to-stone-50">
                   <Image
                     src={heroProduct.featuredImage.url}
                     alt={heroProduct.featuredImage.altText}
@@ -105,10 +105,10 @@ export default async function HomePage() {
                 </div>
                 <div className="mt-5 flex items-end justify-between gap-4">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--brand-accent)]">
+                    <p className="font-display text-xs font-bold uppercase tracking-[0.24em] text-[var(--brand-accent)]">
                       Hero Pick
                     </p>
-                    <h2 className="mt-2 text-2xl font-semibold text-[var(--brand-ink)]">
+                    <h2 className="mt-2 font-display text-2xl font-bold text-[var(--brand-ink)]">
                       {heroProduct.title}
                     </h2>
                     <p className="mt-2 max-w-md text-sm leading-6 text-[var(--brand-muted)]">
@@ -129,13 +129,13 @@ export default async function HomePage() {
         </section>
       </div>
       {featuredProducts.length ? (
-        <section className="mx-auto w-full max-w-6xl px-4 py-12 md:px-6 lg:py-16">
-          <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+        <section className="mx-auto w-full max-w-6xl px-4 py-14 md:px-6 lg:py-20">
+          <div className="mb-10 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--brand-accent)]">
+              <p className="font-display text-xs font-bold uppercase tracking-[0.35em] text-[var(--brand-accent)]">
                 Curated Fans
               </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--brand-ink)]">
+              <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-[var(--brand-ink)] lg:text-4xl">
                 Minimal forms. Quiet performance.
               </h2>
             </div>
@@ -149,9 +149,9 @@ export default async function HomePage() {
               <Link
                 key={product.id}
                 href={`/product/${product.handle}`}
-                className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-[var(--brand-border)] bg-white/80 transition-transform duration-300 hover:-translate-y-1"
+                className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-[var(--brand-border)] bg-white/90 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="relative aspect-square overflow-hidden bg-[#eef4ff]">
+                <div className="relative aspect-square overflow-hidden bg-gradient-to-b from-stone-100 to-stone-50">
                   <Image
                     src={product.featuredImage.url}
                     alt={product.featuredImage.altText}
@@ -162,7 +162,7 @@ export default async function HomePage() {
                 </div>
                 <div className="flex flex-1 flex-col px-5 py-5">
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-xl font-semibold text-[var(--brand-ink)]">
+                    <h3 className="font-display text-xl font-bold text-[var(--brand-ink)]">
                       {product.title}
                     </h3>
                     <p className="whitespace-nowrap text-sm font-semibold text-[var(--brand-ink)]">

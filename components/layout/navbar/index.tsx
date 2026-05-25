@@ -26,7 +26,7 @@ export async function Navbar() {
             className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-8"
           >
             <LogoSquare />
-            <div className="ml-2 max-w-[120px] flex-none text-xs font-semibold uppercase tracking-[0.24em] text-[var(--brand-ink)] md:hidden lg:block">
+            <div className="ml-2 max-w-[120px] flex-none font-display text-sm font-bold tracking-wide text-[var(--brand-ink)] md:hidden lg:block">
               {NAVBAR_WORDMARK}
             </div>
           </Link>

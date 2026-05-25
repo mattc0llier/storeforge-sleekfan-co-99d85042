@@ -1,12 +1,24 @@
 import { CartProvider } from "components/cart/cart-context";
 import { Navbar } from "components/layout/navbar";
-import { GeistSans } from "geist/font/sans";
+import { Syne, DM_Sans } from "next/font/google";
 import { BUSINESS_IDEA, STORE_NAME, TAGLINE } from "lib/shopify/fallback-data";
 import { getCart } from "lib/shopify";
 import { ReactNode } from "react";
 import { Toaster } from "sonner";
 import "./globals.css";
 import { baseUrl } from "lib/utils";
+
+const syne = Syne({ 
+  subsets: ["latin"],
+  variable: "--font-syne",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({ 
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
@@ -37,7 +49,7 @@ export default async function RootLayout({
   const cart = getCart();
 
   return (
-    <html lang="en-GB" className={GeistSans.variable}>
+    <html lang="en-GB" className={`${syne.variable} ${dmSans.variable}`}>
       <body className="bg-[var(--brand-bg)] font-sans text-[var(--brand-ink)] antialiased selection:bg-[var(--brand-accent)] selection:text-white">
         <CartProvider cartPromise={cart}>
           <Navbar />

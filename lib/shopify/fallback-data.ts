@@ -1,8 +1,8 @@
 import { DEFAULT_OPTION } from "lib/constants";
 import { Collection, Menu, Page, Product, ProductVariant } from "./types";
 
-export const STORE_NAME = "SleekFan Co.";
-export const NAVBAR_WORDMARK = "SleekFan";
+export const STORE_NAME = "FanFan";
+export const NAVBAR_WORDMARK = "FanFan";
 export const TAGLINE = "Breeze Through Style.";
 export const BUSINESS_IDEA =
   "Modern and stylish ceiling fans designed for UK homes and flats.";
@@ -174,15 +174,15 @@ export const fallbackCollections: Collection[] = [
 export const fallbackPages: Page[] = [
   {
     id: "fallback-page-about",
-    title: "About SleekFan Co.",
+    title: "About FanFan",
     handle: "about",
     body: `<p>${STORE_NAME} curates modern ceiling fans for UK homes and flats, balancing clean design, quiet performance, and energy-conscious comfort.</p>`,
     bodySummary:
-      "SleekFan Co. curates modern ceiling fans for design-conscious UK homes.",
+      "FanFan curates modern ceiling fans for design-conscious UK homes.",
     seo: {
-      title: "About SleekFan Co.",
+      title: "About FanFan",
       description:
-        "Learn how SleekFan Co. brings modern comfort and efficient airflow to UK interiors.",
+        "Learn how FanFan brings modern comfort and efficient airflow to UK interiors.",
     },
     createdAt: UPDATED_AT,
     updatedAt: UPDATED_AT,
@@ -191,11 +191,11 @@ export const fallbackPages: Page[] = [
     id: "fallback-page-care",
     title: "Fan Care",
     handle: "care",
-    body: `<p>Keep blades dust-free, balance airflow seasonally, and check fixings periodically to keep your SleekFan installation quiet and efficient.</p>`,
+    body: `<p>Keep blades dust-free, balance airflow seasonally, and check fixings periodically to keep your FanFan installation quiet and efficient.</p>`,
     bodySummary:
       "Simple care guidance for keeping modern ceiling fans clean and efficient.",
     seo: {
-      title: "SleekFan Care",
+      title: "FanFan Care",
       description:
         "Simple upkeep guidance for quiet, efficient ceiling fan performance.",
     },
