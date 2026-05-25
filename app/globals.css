@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/container-queries";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --brand-bg: #f9fafb;
+  --brand-surface: #ffffff;
+  --brand-ink: #111827;
+  --brand-muted: #6b7280;
+  --brand-accent: #3b82f6;
+  --brand-border: rgba(17, 24, 39, 0.12);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  html {
+    background-color: var(--brand-bg);
+    color-scheme: light;
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(
+        circle at top right,
+        rgb(59 130 246 / 0.12),
+        transparent 32%
+      ),
+      linear-gradient(180deg, #ffffff 0%, var(--brand-bg) 48%, #eef4ff 100%);
+    color: var(--brand-ink);
+  }
+}
+
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading="lazy"] {
+    clip-path: inset(0.6px);
+  }
+}
+
+a,
+input,
+button {
+  @apply focus-visible:outline-hidden;
+}
+
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+  box-shadow:
+    0 0 0 2px var(--brand-bg),
+    0 0 0 4px var(--brand-accent);
+}
